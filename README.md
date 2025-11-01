@@ -81,17 +81,92 @@ Thinking Engine provides unique capabilities not found in traditional ML framewo
 
 ## 🏗️ System Architecture
 
+### **Architecture Comparison: Thinking Engine vs PyTorch vs Transformers**
+
+| Aspect | Thinking Engine | PyTorch/TensorFlow | Transformer Models |
+|--------|----------------|-------------------|-------------------|
+| **Architecture** | Multi-Agent Cognitive | Neural Network Layers | Attention Mechanisms |
+| **Processing** | Intent → Agent Routing → Response | Forward/Backward Pass | Self-Attention → Feed Forward |
+| **Learning** | Experience-Based Memory | Gradient Descent | Supervised Fine-tuning |
+| **Persistence** | JSON (Human-Readable) | Binary Weights | Serialized Checkpoints |
+| **Modularity** | Agent Specialization | Layer Stacking | Sub-module Composition |
+| **Transparency** | Complete Visibility | Post-hoc Explainability | Attention Weights |
+| **User Control** | Direct Model Surgery | Hyperparameter Tuning | Prompt Engineering |
+| **Scalability** | Agent Distribution | Data Parallelism | Model Parallelism |
+| **Deployment** | Built-in API Server | External Serving | API Integration |
+
+### **Thinking Engine Cognitive Architecture**
+
 ```
-Thinking Engine Architecture:
-├── Cortex (Reasoning & Decision Making)
-├── Multi-Agent System
+🧠 Thinking Engine - Cognitive Multi-Agent Architecture
+├── 🎯 Cortex (Central Intelligence Hub)
+│   ├── Intent Classification Engine
+│   ├── Agent Routing System
+│   └── Response Integration Layer
+├── 🤖 Multi-Agent System
 │   ├── Web Agent (Research & Analysis)
+│   │   ├── Content Analysis Engine
+│   │   ├── Source Verification
+│   │   └── Knowledge Extraction
 │   ├── Code Agent (Execution & Analysis)
+│   │   ├── Python Interpreter
+│   │   ├── Debug Assistant
+│   │   └── Code Optimization
 │   ├── File Agent (I/O Operations)
+│   │   ├── Secure File Access
+│   │   ├── Content Processing
+│   │   └── Data Management
 │   └── Reasoning Agent (Logic & Planning)
-├── Memory System (Experience Storage)
-├── Learning Manager (Adaptive Updates)
-└── Sparse Synaptic Network (Computation)
+│       ├── Logical Inference
+│       ├── Problem Solving
+│       └── Decision Making
+├── 🧠 Memory System (Experience Storage)
+│   ├── Episodic Memory (Past Interactions)
+│   ├── Semantic Memory (Learned Knowledge)
+│   └── Working Memory (Current Context)
+├── 📈 Learning Manager (Adaptive Updates)
+│   ├── Pattern Recognition
+│   ├── Synaptic Updates
+│   └── Performance Optimization
+└── ⚡ Sparse Synaptic Network (Computation)
+    ├── Neural Sparse Representation
+    ├── Adaptive Computation
+    └── Hardware Acceleration (CPU/GPU/MPS/Quantum)
+```
+
+### **vs PyTorch Architecture**
+
+```
+🔥 PyTorch - Neural Network Architecture
+├── 📊 Data Loading & Preprocessing
+├── 🏗️ Model Definition (nn.Module)
+│   ├── Convolutional Layers (Conv2d)
+│   ├── Recurrent Layers (LSTM/GRU)
+│   ├── Attention Layers (MultiHeadAttention)
+│   └── Feed Forward Networks
+├── 🎯 Loss Functions (CrossEntropy, MSE)
+├── ⚡ Optimizers (Adam, SGD, RMSprop)
+├── 🔄 Training Loop (Forward/Backward Pass)
+└── 💾 Model Saving (Binary .pt files)
+```
+
+### **vs Transformer Architecture**
+
+```
+🔄 Transformer - Attention-Based Architecture
+├── 📝 Input Embedding Layer
+├── 🔍 Multi-Head Self-Attention
+│   ├── Query-Key-Value Computation
+│   ├── Attention Score Calculation
+│   ├── Weighted Sum Aggregation
+│   └── Output Projection
+├── ➕ Feed Forward Networks
+│   ├── Position-wise Processing
+│   ├── Non-linear Transformations
+│   └── Residual Connections
+├── 📏 Layer Normalization
+├── 🔀 Encoder-Decoder Structure
+└── 🎭 Output Projection & Generation
 ```
 
 ### Core Components
