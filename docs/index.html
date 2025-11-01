@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thinking Engine - Transparent Cognitive AI Framework</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            color: white;
+            padding: 80px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ff6b6b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn-secondary {
+            background: #4ecdc4;
+            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+        }
+
+        .btn-secondary:hover {
+            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+        }
+
+        .comparison {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .comparison h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+
+        .comparison-table {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .comparison-item {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .comparison-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .comparison-item h3 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .comparison-item.te {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .comparison-item.te h3 {
+            color: white;
+        }
+
+        .feature {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+
+        .code-example {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            margin-top: 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-links a:hover {
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .comparison-table {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <h1>🧠 Thinking Engine</h1>
+            <p><strong>Transparent Cognitive AI Framework</strong><br>
+            The ethical alternative to PyTorch & TensorFlow with human-readable AI models</p>
+
+            <div class="cta-buttons">
+                <a href="https://github.com/reach-Harishapc/thinking-engine" class="btn">🚀 Get Started on GitHub</a>
+                <a href="#comparison" class="btn btn-secondary">📊 Compare Frameworks</a>
+            </div>
+        </section>
+
+        <section class="comparison" id="comparison">
+            <h2>Why Choose Thinking Engine?</h2>
+
+            <div class="comparison-table">
+                <div class="comparison-item">
+                    <h3>🤖 PyTorch/TensorFlow</h3>
+                    <ul style="text-align: left; list-style: none;">
+                        <li>❌ Binary model files (opaque)</li>
+                        <li>❌ Limited user customization</li>
+                        <li>❌ Post-hoc explainability only</li>
+                        <li>❌ Complex deployment setup</li>
+                        <li>❌ Gradient descent learning</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-item te">
+                    <h3>🧠 Thinking Engine</h3>
+                    <ul style="text-align: left; list-style: none; color: white;">
+                        <li>✅ JSON model files (human-readable)</li>
+                        <li>✅ Direct model surgery</li>
+                        <li>✅ Complete transparency</li>
+                        <li>✅ Built-in API server</li>
+                        <li>✅ Experience-based learning</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-item">
+                    <h3>🎯 Key Advantages</h3>
+                    <ul style="text-align: left; list-style: none;">
+                        <li>🔍 Inspect AI "brain" directly</li>
+                        <li>✏️ Edit personality & knowledge</li>
+                        <li>🤝 Human-AI collaboration</li>
+                        <li>🔒 Integrity verification</li>
+                        <li>🚀 Multi-agent intelligence</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-grid">
+            <div class="feature-card">
+                <h3>🔍 Full Transparency</h3>
+                <p>Unlike traditional frameworks, Thinking Engine uses JSON for model persistence. You can literally read and edit your AI's "brain" with any text editor.</p>
+
+                <div class="code-example">
+{
+  "cortex": {
+    "personality": "helpful and analytical",
+    "learned_patterns": ["python", "math", "logic"]
+  },
+  "memory": {
+    "experiences": [
+      {"input": "hello", "output": "Hi! How can I help?"}
+    ]
+  }
+}
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <h3>🎛️ Model Surgery</h3>
+                <p>Directly modify AI behavior without retraining. Change personality, add knowledge, customize responses - all in real-time.</p>
+
+                <strong>Use Cases:</strong>
+                <ul>
+                    <li>Create custom AI personalities</li>
+                    <li>Add domain-specific knowledge</li>
+                    <li>Fine-tune responses instantly</li>
+                    <li>Ethical AI customization</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3>🤖 Multi-Agent Intelligence</h3>
+                <p>Specialized agents work together for comprehensive AI capabilities:</p>
+
+                <ul>
+                    <li><strong>Web Agent:</strong> Research & content analysis</li>
+                    <li><strong>Code Agent:</strong> Programming assistance</li>
+                    <li><strong>File Agent:</strong> Secure file operations</li>
+                    <li><strong>Reasoning Agent:</strong> Logic & planning</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3>🚀 Production Ready</h3>
+                <p>Built-in features for real-world deployment:</p>
+
+                <ul>
+                    <li>REST API server included</li>
+                    <li>Model compression & security</li>
+                    <li>Integrity verification</li>
+                    <li>Scalable architecture</li>
+                    <li>Experience-based learning</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <div class="stat-number">95%</div>
+                <div>Mathematical Computation Accuracy</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">92%</div>
+                <div>Python Code Education Quality</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">0.8s</div>
+                <div>Average Response Time</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">1.2MB</div>
+                <div>Model Size (vs 750MB PyTorch)</div>
+            </div>
+        </section>
+
+        <section class="feature">
+            <h2>🚀 Quick Start</h2>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 30px 0;">
+                <div>
+                    <h3>Installation</h3>
+                    <div class="code-example">
+git clone https://github.com/reach-Harishapc/thinking-engine.git
+cd thinking-engine
+pip install -r requirements.txt
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Basic Usage</h3>
+                    <div class="code-example">
+from run_model import ThinkingModelInterface
+
+model = ThinkingModelInterface()
+response = model.think("What is 2+5?")
+print(response)
+# Output: The addition of 2 + 5 equals 7...
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer">
+            <h2>🌟 Join the Transparent AI Revolution</h2>
+            <p>Thinking Engine represents a paradigm shift in AI development - moving from opaque, uncontrollable systems to transparent, user-empowerable AI.</p>
+
+            <div class="cta-buttons" style="margin: 30px 0;">
+                <a href="https://github.com/reach-Harishapc/thinking-engine" class="btn">🚀 Explore on GitHub</a>
+                <a href="https://github.com/reach-Harishapc/thinking-engine/blob/main/arxiv_submission/arxiv_paper.pdf" class="btn btn-secondary">📄 Read Research Paper</a>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/reach-Harishapc">🐙 GitHub</a>
+                <a href="https://www.linkedin.com/in/harisha-p-c-207584b2/">💼 LinkedIn</a>
+                <a href="mailto:reach.harishapc@gmail.com">📧 Email</a>
+            </div>
+
+            <p style="margin-top: 20px; opacity: 0.8;">
+                Created by Harisha P C • Data Scientist & AI Researcher<br>
+                MIT License • Open Source • Transparent AI for Everyone
+            </p>
+        </section>
+    </div>
+
+    <script>
+        // Add some interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add fade-in animation to feature cards
+            const featureCards = document.querySelectorAll('.feature-card');
+            featureCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+
+            // Add hover effects to stat cards
+            const statCards = document.querySelectorAll('.stat-card');
+            statCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                    this.style.transition = 'transform 0.3s ease';
+                });
+
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
