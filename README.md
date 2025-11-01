@@ -75,6 +75,7 @@ Thinking Engine provides unique capabilities not found in traditional ML framewo
 - **🤝 Human-AI Collaboration** - User control over AI behavior
 - **🔒 Built-in Security** - Integrity verification and compression
 - **🚀 Production Ready** - API server included, no additional setup needed
+- **⚡ Multi-Platform Support** - CPU, GPU, MPS, and Quantum hardware backends
 
 ---
 
