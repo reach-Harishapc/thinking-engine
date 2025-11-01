@@ -5,8 +5,8 @@
 [![arXiv](https://img.shields.io/badge/arXiv-Coming%20Soon-red.svg)](https://arxiv.org/)
 
 **Authors:** [Harisha P C](https://www.linkedin.com/in/harisha-p-c-207584b2/)  
-**Affiliation:** Independent Researcher  
-**Contact:** reach.harishapc@gmail.com  
+**Affiliation:** Data Scientist | GenAI & Quantum Computing Specialist | AI Research | AWS Cloud Expert | Industry 4.0→5.0 & IoT Innovator | Metaverse | AR/VR Visionary | Digital Twin | Digital Transformation | Quantum AI | Agentic AI  
+**Contact:** reach.harishapc@gmail.com
 **GitHub:** [reach-Harishapc](https://github.com/reach-Harishapc)  
 **arXiv Submission:** [arxiv_submission/](arxiv_submission/) (Pending endorsement)
 
