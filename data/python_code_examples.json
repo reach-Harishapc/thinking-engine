@@ -1,0 +1,62 @@
+[
+  {
+    "pattern": "print hello world",
+    "question": "how to print hello world in python",
+    "solution": "print('Hello, World!')",
+    "explanation": "Use the print() function to display text on the screen."
+  },
+  {
+    "pattern": "variable assignment",
+    "question": "how to create a variable",
+    "solution": "name = 'John'\nage = 25\nis_student = True",
+    "explanation": "Variables are created by assigning values using the = operator."
+  },
+  {
+    "pattern": "if else",
+    "question": "how to use if else",
+    "solution": "age = 18\nif age >= 18:\n    print('You are an adult')\nelse:\n    print('You are a minor')",
+    "explanation": "Use if-else statements to make decisions based on conditions."
+  },
+  {
+    "pattern": "for loop",
+    "question": "how to loop through a list",
+    "solution": "fruits = ['apple', 'banana', 'orange']\nfor fruit in fruits:\n    print(fruit)",
+    "explanation": "For loops iterate over sequences like lists."
+  },
+  {
+    "pattern": "function definition",
+    "question": "how to define a function",
+    "solution": "def greet(name):\n    return f'Hello, {name}!'\n\nprint(greet('Alice'))",
+    "explanation": "Functions are defined using the def keyword."
+  },
+  {
+    "pattern": "list operations",
+    "question": "how to add to a list",
+    "solution": "numbers = [1, 2, 3]\nnumbers.append(4)\nprint(numbers)  # [1, 2, 3, 4]",
+    "explanation": "Use append() to add elements to the end of a list."
+  },
+  {
+    "pattern": "dictionary access",
+    "question": "how to get value from dictionary",
+    "solution": "person = {'name': 'John', 'age': 30}\nprint(person['name'])  # John\nprint(person.get('age'))  # 30",
+    "explanation": "Access dictionary values using keys with [] or .get() method."
+  },
+  {
+    "pattern": "string concatenation",
+    "question": "how to combine strings",
+    "solution": "first_name = 'John'\nlast_name = 'Doe'\nfull_name = first_name + ' ' + last_name\nprint(full_name)  # John Doe",
+    "explanation": "Use + operator to concatenate strings."
+  },
+  {
+    "pattern": "while loop",
+    "question": "how to use while loop",
+    "solution": "count = 0\nwhile count < 5:\n    print(count)\n    count += 1",
+    "explanation": "While loops continue as long as the condition is True."
+  },
+  {
+    "pattern": "class definition",
+    "question": "how to create a class",
+    "solution": "class Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n    \n    def greet(self):\n        return f'Hello, I am {self.name}'\n\nperson = Person('Alice', 25)\nprint(person.greet())",
+    "explanation": "Classes are defined using the class keyword and can have methods and attributes."
+  }
+]
