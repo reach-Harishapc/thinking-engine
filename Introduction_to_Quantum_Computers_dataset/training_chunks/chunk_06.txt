@@ -1,0 +1,193 @@
+Quantum Teleportation
+Explained
+63
+1)Generate an entangled pair of electrons with spin states A and B, 
+in a particular Bell state
+2)Separate the entangled electrons, sending A to Alice and B to Bob.
+3)Alice measures the "Bell state" (described below) of A and C, 
+entangling A and C.
+4)Alice sends the result of her measurement to Bob via some 
+classical method of communication.
+5)Bob measures the spin of state B along an axis determined by 
+Alice's measurement•Alice's measurement disentangles A and B and entangles A and 
+C. Depending on what particular entangled state Alice sees, Bob 
+will know exactly how B was disentangled, and can manipulate B 
+to take the state that C had originally. Thus, the state C was 
+"teleported" from Alice to Bob, who now has a state that looks 
+identical to how C originally looked.
+•It is important to note that state C is not preserved in the 
+processes: the no-cloning and no-deletion theorems of quantum 
+mechanics prevent quantum information from being perfectly 
+replicated or destroyed. 
+•Bob receives a state that looks like C did originally, but Alice no 
+longer has the original state C in the end, since it is now in an 
+entangled state with A. 
+Case Study 2: Shor Algorithm of Factoring
+•Theorem of Number Theory
+•If a ±b(mod N) but a2b2(mod N), then gcd(a+b,N ) is a factor of N.
+•To Factor N on a quantum computer:
+•Select xcoprime to N
+•Use QFT on quantum computer to find the period of
+•Use order of xto compute possible factors of N.
+•Check if they work;  If not, rerun. 
+•Best classical algorithm takes time 
+But Shor ’s quantum algorithm  takes time
+Peter Shor 1994
+64
+Quantum Fourier Transform (QFT)
+65
+Case Study 2: Shor Algorithm of Factoring
+4727721461074353025362
+2307197304822463291469
+5302097116459852171130
+5207112563635903975273980750864240649373971
+2550055038649119906436
+2342526708406385189575
+9463889572617685833171881988129206079 6383 869723946 165043
+980716356337941 7382700763356 4229888
+5971523466548531 90606065047 43045 317
+3880113033967161996 92321205 73403187
+955065699622130 5168 75930765 0257059
+66
+Case Study 3: Variational Quantum Eigensolver 
+•VQE is a quantum/classical hybrid algorithm that can be used to find 
+eigenvalues of a matrix H.
+•When VQE is used in quantum simulations, H is typical the Hamiltonian of an 
+electronic system.
+•It is run inside of a classical optimization loop.
+•The quantum part has two fundamental steps:
+•Prepare the quantum states | >, often called the ansatz;
+•Measure the expectation value < |H|>
+•The classical optimization loop does two tasks:
+•Use a classical non -linear optimizer to minimize the expectation value by varying ansatz 
+parameters
+•Iterate until convergence is reached.
+Nature Communications , 5, 4213, (2014).
+New J. Phys . 18, 023023 (2016).67
+VQE Procedures
+●The Hamiltonian of the system is mapped to a qubit Hamiltonian
+●A  trial wavefunction is picked 
+●A quantum circuit is applied to prepare the desired state. The quantum circuit used in the 
+variational eigensolver is a Hadamard gate applied to each qubit to create a superimposed 
+state, followed by a y and z rotation (Ry , Rz)
+●The energy of the trial state is estimated by a classic optimizer 
+●Varies the parameters of the state to redo the loop
+●Loops until the energy minimization condition is met
+68
+Case Study 3: 
+Variational Quantum 
+Eigensolver 
+69
+Case Study 3: Variational Quantum Eigensolver 
+70
+ Google group, Science 369, 1084 (2020)IBM group, Nature 549, 242 (2017)
+ Google group, PRX 6, 031007 (2016 )
+Siddiqi group, PRX 8, 011021 (2018)H12H2 LiH H2
+H2BeH2
+Post -Quantum World
+There is a good chance that quantum computers will be able to crack RSA -2048 within five -ten years 
+(need about 8,000 qubits in a universal computer to do this).
+Some encrypted data has a shelf -life of more than ten years. It may take ten years to cut over to a new 
+encryption scheme, so companies and governments are scrambling to figure out what to do.
+Most encryption used today is not safe in a quantum world. 
+If someone has been recording a https session, say, they may not be able to decrypt it now, but a few 
+years from now, who knows.
+There are encryption algorithms that are safe:
+Secure communications will move to symmetric encryption or hash algorithms, or perhaps lattice 
+algorithms.
+QKD (Quantum Key Distribution) will likely be more popular for the most sensitive communications
+Some governments and banks are already starting to use “Quantum Safe” algorithms, and this is 
+expected to increase over the next decade.
+71
+Gartner Hype Cycle.
+Gartner projects a $5B 
+market by 2020 worth 
+perhaps >$100B in ten 
+years
+72
+Qubits in computers announced over the past 5 years
+Danger zone:
+2048 bit encryption
+Can be crackedFuture of 
+Quantum Computers
+Neven ’s Law ,named after Hartmut Neven ,the director of 
+Google's Quantum Artificial Intelligence Lab, stated that 
+quantum processors grow at a doubly -exponential rate .Qubit count of general -purpose quantum 
+computers will double roughly every one to two 
+years, or roughly every 18months on average.
+Problems with Quantum Computers
+•Decoherence
+•Quantum system is extremely sensitive to external environment, so it should 
+be safely isolated
+•It is hard to achieve the decoherence time that is more than the algorithm 
+running time
+•Error correction (requires more qubits!)
+•Physical implementation of computations
+•New quantum algorithms to solve more problems
+•Entangled states for data transfer
+•Running time increases exponentially with matrix size
+73
+Further Reading
+74
+https://en.wikipedia.org/wiki/Talk:Quantum_computing/Further_Reading
+Future Short -Courses in Planning
+•Intermediate Level –Quantum Algorithms and Applications
+•Deutsch –Jozsa algorithm
+•Bernstein –Vazirani algorithm
+•Simon's algorithm
+•Quantum phase estimation algorithm
+•Grover's algorithm
+•Shor’s Algorithm
+•Quantum Fourier Transform
+•Advanced Level –Applications of Quantum Computers in Chemistry
+•Variational quantum eigensolver
+•QAOA (quantum approximate optimization algorithm)
+75Two more short courses on quantum computing are under consideration :
+Credit, Citation and Acknowledgment
+•https://arnaldogunzi.medium.com/nisq -era-3b45b71bb11a
+•https://www.geeksforgeeks.org/introduction -of-logic -gates/
+•https://en.wikipedia.org/wiki/Quantum_logic_gate
+•https://www.hpcwire.com/2020/08/19/intel -connects -the-quantum -dots -in-accelerating -quantum -computing -effort/
+•https://medium.com/uvc -partners -news/the -european -quantum -computing -startup -landscape -a115ffe84ad8
+•https://industry40marketresearch.com/product/quantum -computing -market -technologies/
+•https://en.wikipedia.org/wiki/Timeline_of_quantum_computing_and_communication
+•https://www.yaabot.com/31345/quantum -computing -neural -chips -moores -law-future -computing/
+•https://en.wikipedia.org/wiki/Schr%C3%B6dinger%27s_cat
+•https://www.newscientist.com/article/mg23030710 -500-thats -odd-quantum -entanglement -mangles -space -and-time/
+•https://blogs.umass.edu/Techbytes/2016/10/18/quantum -computing/
+•https://www.fonow.com/view/267479.html
+•https://science.sciencemag.org/content/356/6343
+•https://www.nature.com/nature/volumes/574/issues/7779
+•https://www.ibm.com/blogs/research/2017/09/quantum -molecule/
+•https://phys.org/news/2020 -10-ionq -next -generation -quantum.html
+•https://www.advancedsciencenews.com/researchers -claim -quantum -supremacy -with -new -computer/
+•https://www.cnet.com/news/quantum -computer -makers -like-their -odds -for-big-progress -soon/
+•https://medium.com/faun/hello -many -worlds -in-quantum -computer -524fe90b833b
+•https://www.epiqc.cs.uchicago.edu/hybrid -quantum -classical -computing
+•https://brilliant.org/wiki/quantum -teleportation/
+•https://www.youtube.com/watch?v=yprDIC -9D0k
+•https://www.youtube.com/watch?v=QuR969uMICM76
+DEMO: Quantum Computing with IBM QISKit
+•IBM QISKit (Quantum Information Science 
+Kit) API, a Cloud -enabled Python interface 
+to quantum computer:
+•What is QISKit?
+•How to obtain an account? How to login?
+•How to build simple quantum circuits?
+•How to run quantum circuits on IBM 
+quantum computers?
+•How to monitor jobs and visualize results?
+•How to find online tutorials and 
+documentations?
+77
+GETTING STARTED WITH QISKIT DEMO| Anastasia Marchenkova
+https://www.youtube.com/watch?v=yprDIC -9D0k
+QISKit DEMO
+Questions & Comments??? 
+Please direct comments/questions about research computing to
+E-mail: research@unc.edu
+Please direct comments/questions pertaining to this presentation to
+E-Mail: shubin@email.unc.edu
+The PPT file of this presentation is available here:
+http://its2.unc.edu/divisions/rc/training/scientific/short_courses/Quantum_Computer.ppt
+79

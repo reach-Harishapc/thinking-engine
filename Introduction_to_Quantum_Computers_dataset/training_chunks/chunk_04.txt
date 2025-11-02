@@ -1,0 +1,47 @@
+Decoherence
+•Quantum decoherence is the loss of superposition, because of the 
+spontaneous interaction between a quantum system and its 
+environment.
+•Decoherence can be viewed as the loss of information from a system 
+into the environment.
+•The reason why quantum computers still have a long way to go 
+because superposition and entanglement are extremely fragile states.
+•Preventing decoherence remains the biggest challenge in building 
+quantum computers.
+27
+Measurement
+•If a quantum system were perfectly isolated, it would maintain coherence 
+indefinitely, but it would be impossible to manipulate or investigate it.
+•A quantum measure is a decoherence process.
+•When a quantum system is measured, the wave function |collapses to a 
+new state according to a probabilistic rule.
+•If |> = 0|0> + 1|1>, after measurement, either | = |0or |= |1,
+and these alternatives occur with certain probabilities of |0|2and | 1|2
+with | 0|2+ |1|2=1.
+•A quantum measurement never produces |= 0|0> + 1|1>.
+•Example : Two qubits: |> = 0.316|00 ›+0.447|01 ›+0.548|10 ›+0.632|11 ›
+The probability to read the rightmost bit as 0 is |0.316|2+|0.548|2= 0.4
+28
+Quantum Gate
+•A quantum gate (or quantum logic gate ) is a basic quantum circuit 
+operating on qubits. 
+•They are the building blocks of quantum circuits, like classical logic 
+gates are for conventional digital circuits
+•Due to the normalization condition every gate operation Uhas to be 
+unitary: 
+•The number of qubits in the input and output of the gate must be 
+equal; a gate which acts on n qubits is represented by 2n x 2nunitary 
+matrix  
+•Unlike many classical logic gates, quantum gates are reversible. 
+I UU =*
+29
+Unitary Matrix
+•In linear algebra , a complex square matrix Uis unitary if its conjugate 
+transpose U*is also its inverse , that is, if 
+where Iis the identity matrix . 
+•Unitary transformations are linear transformations that preserve vector norm; 
+In 2 dimensions, linear transformations preserve unit circle ( rotations and 
+reflections ).
+•Examples:
+which depends on parameters a, b, φ and.
+ Bloch Sphere30

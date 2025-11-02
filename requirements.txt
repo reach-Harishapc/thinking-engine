@@ -1,10 +1,16 @@
-Flask==2.3.3
-requests==2.31.0
-numpy==1.24.3
-python-dateutil==2.8.2
-urllib3==2.0.7
-
+Flask
+requests
+numpy
+PyPDF2
+psutil
 # Optional: For enhanced deployment features
 # flask-limiter==3.5.0  # Rate limiting
 # gunicorn==21.2.0     # Production WSGI server
 # gevent==23.9.1       # Async workers
+
+# Multi-platform testing dependencies
+matplotlib           # For plotting and visualization
+torch>=2.0.0        # For GPU/MPS support (Apple Silicon optimized)
+qiskit>=0.44.0      # For quantum computing simulation 
+qiskit-aer>=0.12.0  # Quantum simulator 
+psutil              # For system monitoring

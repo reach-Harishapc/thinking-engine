@@ -1,0 +1,126 @@
+Quantum Computing Race -Corporations
+R&D investments reach $10.7 billion by 2024
+17
+18YEAR 2020
+Quantum Bit -Qubit
+•The smallest unit of information in a quantum computer
+•It represents the state of the wavefunction | > in Schrödinger  
+equation
+•A qubit may be in the “on” (1) state or in the “off” (0) state
+•Many ways to implement a qubit:
+•Nuclear spin in NMR: = |0>, = |1>.
+•Photons in a cavity: 0 photon = |0>, 1 photon = |1>
+•Energy states of an atom: g.s.|0>, excited state |1>
+•Polarization of photon, many others….
+Transistor19
+Quantum Bit -Qubit
+z = |0 >
+-z = |1 >xyθ
+φ|ψ>
+ˆˆ
+ˆˆ
+
+
++ = 12sin 02cos   i ie e•Since quantum systems evolve according to linear equations (the 
+Schrödinger equation), linear combinations of solutions are also 
+solutions. So, for the state of a qubit|0> and |1>, its superposition 
+also describes the same state
+•The general form of a qubit state can be represented by:
+0|0›+ 1|1›
+where 0and 1are complex numbers that specify the probability 
+amplitudes of the corresponding states.
+•|0|2gives the probability that you will find the qubit in the “off” 
+(0) state; | 1|2gives the probability that you will find the qubit in 
+the “on” (1) state.
+•Normalization condition: | 0|2+ |1|2= 1
+20Bloch Sphere
+Classical Bit vs. Quantum Bit
+CLASSICAL BITS :
+•can be in two distinct 
+states, 0 and 1
+•can be measured 
+completely
+•are not changed by 
+measurement
+•can be copied
+•can be erasedQUANTUM BITS :
+•can be in state |0> or in state |1> 
+or in any other state that is a linear 
+combination of the two states
+•can be measured partially with 
+given probability
+•are changed by measurement
+•cannot be copied
+•cannot be erased
+21
+•Adding qubits increases storage exponentially
+•Quantum computer doubles the power with every added qubit
+•To double the power of a digital computer 32bits -> 64 bits
+•To double the power of a quantum computer 32qubits -> 33 qubits
+•Can do operations on all superpositions…like massively parallel computation
+•One math operation on 2nnumbers encoded in classical computers with n bits 
+requires 2nsteps or parallel processors, but the same operation on 2nnumbers 
+encoded by n qubits takes 1step
+•A 64 -bit computer can perform manipulation on 64 -bit binary numbers at a time.
+•A 64 -qubit quantum computer operates in a space of 264 dimensions, or roughly 
+16,000,000,000,000,000,000 (16*1018) numbers to specify the state of the quantum system.
+•This makes complex problems much easier to solve by quantum computerAdvantages of Qubits & Enormous Quantum Power
+22
+However, Quantum Systems are SPOOKY!
+Schrödinger’s Cat: Superposition
+“Icannot seriously believe in[the quantum theory] because itcannot be
+reconciled with the idea that physics should represent areality intime and
+space, free from spooky actions atadistance .”Albert Einstein, March 1947 .
+Entanglement
+23Schrödinger’s 
+Cat in a black 
+box
+Superposition
+•Every quantum state can be represented as a sum of two or more other distinct states. 
+Mathematically, it refers to a property of solutions to the Schrödinger equation; since the 
+Schrödinger equation is linear, any linear combination of solutions will also be a solution. 
+•A single qubit can be forced into a superposition of the two states denoted by the addition of the 
+state vectors:
+|> = 0|0> + 1|1>
+Where 0and 1are complex numbers and | 0|2+ | 1|2= 1
+•A qubit in superposition is in both of the states |1> and |0 at the same time 
+•If this state is measured, we see only one or the other state (live or dead) with some probability.
+•The classic example of superposition is Schrödinger’s Cat in a black box.  Since both a living and 
+dead cat are obviously valid solutions to the laws of quantum mechanics, a superposition of the 
+two should also be valid.  Schrödinger described a thought experiment that could give rise to 
+such a state.
+•Consider a 3 -qubit register.  An equally weighted superposition of all possible states would be 
+denoted by:
+|> =     |000> + |001> + . . . +     |111>
+ 1
+√81
+√81
+√824
+Entanglement
+•When a pair or group of particles is generated, interact, or share spatial proximity in a way such 
+that the quantum state of each particle of the pair or group cannot be described independently 
+of the state of the others, even when the particles are separated by a large distance . 
+•An entangled pair is a single quantum system in a superposition of equally possible states. The 
+entangled state contains no information about the individual particles, only that they are in 
+opposite states. 
+•If the state of one is changed, the state of the other is instantly adjusted to be consistent with 
+quantum mechanical rules. 
+•If a measurement is made on one, the other will automatically collapse.
+•Quantum entanglement is at the heart of the disparity between classical and quantum physics: 
+entanglement is a primary feature of quantum mechanics lacking in classical mechanics . 
+•Entanglement is a joint characteristic of two or more quantum particles.
+•Einstein called it “ spooky actions at a distance ”
+25
+26
+( )( ) 11' 10' 01' 00' 1' 0'1 0 ββ βα αβ ααβαβα + + + = + +The state of the combined system is their tensor product :Suppose that two qubits are in states: 
+1 0+ 
+1' 0' + Entanglement
+11 10 01 0021
+21
+21
+21− − +
+Question: what are the states of the individual qubits for
+1.
+2.
+11 0021
+21+ an entangled statean independent state

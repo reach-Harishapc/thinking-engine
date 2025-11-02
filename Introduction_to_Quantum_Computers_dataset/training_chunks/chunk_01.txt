@@ -1,0 +1,17 @@
+Shubin Liu, Ph.D.
+Research Computing Center
+University of North Carolina at Chapel Hill
+Chapel Hill, NC 27599 -3420Introduction to Quantum Computers
+Objectives & Prerequisites 
+•After this workshop, you should be
+•Familiar with basics and general trends of quantum computers
+•Able to understand simple quantum circuits
+•Ready to build and run simple quantum computing tasks with QISKit
+•We assume that you know
+•Basic knowledge of linear algebra and statistics, but not mandatory 
+•No prior knowledge of quantum mechanics required
+•Recommendation : An account @ IBM Quantum Experience
+https://quantum -computing.ibm.com
+2
+A BEGINNER'S GUIDE TO QUANTUM COMPUTING | Shohini Ghose
+https://www.youtube.com/watch?v=QuR969uMICM

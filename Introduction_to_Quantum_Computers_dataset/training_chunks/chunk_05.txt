@@ -1,0 +1,442 @@
+Single Qubit Gate
+•Pauli -X gate
+•Acting on pure states becomes a classical NOT gateU | 0  Any state | 
+X | 0  | 1 
+Dirac notation Matrix representation Circuit representation
+31
+Single Qubit Gates
+Dirac notation Matrix representation Circuit representation
+…another gate with no classical equivalence
+10
+0i 
+   
+ 
+S /8
+1 0
+0ei/4 
+   
+ 
+Phase                /8 (T) gate 
+𝐏𝐚𝐮𝐥𝐢𝐙−𝐆𝐚𝐭𝐞𝐬:Z=10
+0−1
+𝑆𝑆
+Z=
+2PZ=𝐏𝐚𝐮𝐥𝐢𝐘−𝐆𝐚𝐭𝐞
+Z
+Bloch Sphere
+32
+Hadamard Gate
+•Acts on a single qubit
+–Corresponding to the Hadamard transform leading to superposition
+Dirac notation Unitary matrix Circuit representation
+no classical equivalent!(|0+ |1)/2  →|0
+(|0−|1)/2  →|1
+33
+The Amazing H -Gate
+•After aqubit instate |0or|1hasbeen acted upon byaHgate, thestate of
+thequbit isanequal superposition of|0and |1.Thus, thequbit goes from a
+deterministic state toatruly random state, i.e.,ifthequbit isnow measured,
+wewillmeasure |0or|1with equal probability .
+•We see that Hisitsown inverse, that is,H−1=HorH2=I.Therefore, by
+applying Htwice toaqubit wechange nothing .This isamazing!
+•By applying arandomizing operation toarandom state produces a
+deterministic outcome!
+•One ofthemost important gates inquantum computing!
+34
+CNOT Gate
+•Controlled NOT gate
+•Acts on two qubits
+-If the control qubit is set to 0, target qubit is the same
+-If the control qubit is set to 1, target qubit is flipped
+•Equivalent to classical gate operation XORMatrix representation Circuit representation
+|00→|00,  |01→|01
+|10→|11,   |11→|10
+The output is“true” ifand only ifexactly one oftheoperands hasavalue of“true” .35
+Quantum vs. Classic Gates
+NOT gate
+AND gatex y = NOT(x)
+x y z
+0
+1
+1
+1 1 10 0
+0 0
+0 0
+x y z
+0
+1
+1
+1 11 0
+00
+0NAND gatex
+yz = (x) AND (y)
+x
+yz = (x) NAND (y)1
+1x y
+0
+0 11
+0
+1
+1x y z
+0
+1
+1
+1 110
+0
+0x
+yz = (x) OR (y) OR gate
+x y z
+0
+1
+1
+1 11 0
+0
+0x
+yz = (x) NOR (y) NOR gate 0
+0
+0
+x y z
+0
+1
+1
+1 110
+0
+0x
+yz = (x) XOR (y) XOR gate
+10
+0
+36
+Quantum Circuit
+•A quantum circuit is a model for quantum computation in which a 
+computation is a sequence of quantum gates with n-qubit register 
+linked by “wires”
+•The circuit has fixed “width” corresponding to the number of qubits 
+being processed
+Unlike classical circuits,
+the same number of wires
+is going throughout the circuit
+37
+Bell State –How to Generate Entanglement?
+38
+Using two qubits to generate an entanglement state, also called Bell state, 
+with a Hadamard gate and a CNOT gate
+Quantum vs. Classical Circuits
+cn–1
+s0
+s1
+s2
+s3
+cna0
+b0
+a1
+b1
+a3
+b3a2
+b2
+Sum
+Carry•Classical Logic Circuits
+•Circuit behavior is  governed implicitly by 
+classical physics
+•Signal states are simple bit vectors, e.g. X
+= 01010111
+•Operations are defined  by Boolean 
+Algebra
+•No restrictions exist on copying or 
+measuring signals
+•Small well -defined sets of universal gate 
+types, e.g. {NAND},
+{AND,OR,NOT}, {AND,NOT}, etc.
+•Well developed CAD methodologies exist
+•Circuits are easily implemented in fast,  
+scalable and macroscopic technologies 
+such as CMOS
+39
+•Quantum Logic Circuits
+•Circuit behavior is governed explicitly by quantum 
+mechanics
+•Signal states are  vectors interpreted as a  
+superposition of binary “qubit” vectors with complex -
+number coefficients
+•Operations are defined by linear algebra over Hilbert 
+Space and can be represented by unitary matrices 
+with complex elements
+•Severe restrictions exist on copying and measuring
+signals
+•Many universal gate sets exist but the best types are 
+not obvious
+•Circuits must use microscopic technologies that are 
+slow, fragile, and not yet scalable, e.g., NMR
+= ciin−1in−1i0
+i=02n−1
+Quantum vs. Classical Circuits
+40
+Quantum Algorithms
+•It may be possible to solve a problem on a quantum system much faster (i.e., 
+using fewer steps) than on a classical computer
+•Factoring and searching are examples of problems where quantum algorithms 
+are known and are faster than any classical ones
+•Implications for cryptography, information security
+•What makes a quantum algorithm potentially faster than
+any classical one?
+•Quantum parallelism: by using superpositions of quantum states, the computer is 
+executing the algorithm on all possible inputs at once
+•Dimension of quantum Hilbert space: the “size” of the state space for the quantum 
+system is exponentially larger than the corresponding classical system
+•Entanglement capability: different subsystems (qubits) in a quantum computer become 
+entangled, exhibiting nonclassical correlations
+41
+Famous Quantum Algorithms
+2 2)(log n N=
+nn
+Nn N N
+22 ) log(
+==
+Algorithms Classical steps quantum logic steps
+Fourier transform
+e.g.: 
+-Shor’s prime factorization
+-discrete logarithm problem
+-Deutsch Jozsa algorithm-n qubits
+-N numbers-hidden information!
+-Wave function collapse 
+prevents us from directly 
+accessing the information
+Search Algorithms
+Quantum Simulation cNbits knqubits
+N
+N
+42
+More Quantum AlgorithmsQuantum Algorithm Zoo:  https://quantumalgorithmzoo.org/
+43
+•There is already a number of programming languages
+adapted for quantum computing
+•The purpose of quantum programming languages
+is to provide a tool for researchers , not a tool for programmers
+•QCL is an example of such language
+•IBM QISKit ( Quantum Information Science Kit ) is another exampleQuantum Programming
+44
+•QCL (Quantum Computation Language)
+http://tph.tuwien.ac.at/~oemer/qcl.html
+Quantum Programming
+C-like syntax
+allows combining of 
+quantum and
+classical code
+45
+•QISKit (Quantum Information Science Kit)
+Qiskit is an open -source framework for quantum computing. It provides tools for creating and 
+manipulating quantum programs and running them on prototype quantum devices on IBM 
+Quantum Experience over Cloud -based accessQuantum Programming
+46
+Quantum 
+Programming 
+Languages
+47
+How does a 
+quantum 
+computer work?
+The flow of submitting a job 
+from a classical computer to a 
+quantum computer, executing 
+the job, and returning quantum 
+measurement results to the 
+classical computer.
+Quantum Computer Architecture
+cloud
+•Requirements
+•Qubit implementation itself; 
+•Control of unitary evolution; 
+•Initial state preparation (qubits); 
+•Measurement of the final state(s).
+•Other Considerations
+•Systems have to be almost completely isolated from their environment
+•The coherent quantum state has to be preserved
+•Decoherence times have to be very long
+•Performing operations on several qubits in parallel
+•Physical system with two uniquely addressable states
+•A universal set of quantum gates
+•Ability to entangle two qubits
+Design of Quantum Computer
+49
+Implementation of Quantum Hardware
+Number of ParticlesControl  &  configurabilitymoleculestrapped 
+ionsVerification?
+NV
+Q-dots
+superconductors
+neutral
+atoms•Liquid -state NMR
+•NMR spin lattices
+•Linear ion -trap spectroscopy
+•Neutral -atom optical lattices
+•Cavity QED + atom
+•Linear optics
+•Nitrogen vacancies in diamond
+•Electrons in liquid He
+•Superconducting Josephson junctions
+•charge qubits; flux qubits; phase qubits
+•Quantum Hall qubits
+•Coupled quantum dots
+•spin, charge, excitons
+•Spin spectroscopies, impurities in 
+semiconductors
+50
+Superconducting CircuitsLeading Quantum Computer Hardware Candidates
+CHALLENGES
+•short ( 10-6sec) memory
+•0.05 K cryogenics
+•all qubits different 
+•not reconfigurable
+Superconducting qubit : 
+right or left currentFEATURES & STATE -OF-ART
+•connected with wires
+•fast gates
+•5-10 qubits demonstrated
+•printable circuits and VLSIAtomic qubits connected through  
+laser forces on motion or photonsindividual 
+atoms
+lasers
+photonTrapped Atomic IonsFEATURES & STATE -OF-ART
+•very long (>> 1 sec) memory
+•5-20 qubits demonstrated
+•atomic qubits all identical
+•connections reconfigurableCHALLENGES
+•lasers & optics
+•high vacuum 
+•4K cryogenics
+•engineering needed
+•NV-Diamond and other solid state “atoms ”
+•Atoms in optical lattices
+•Semiconductor gated quantum dotsInvestments:IARPA Lockheed
+DoD Honeywell
+Sandia UK Gov’t
+LARGE
+Investments:IARPA Lincoln Labs 
+DoD Intel/Delft
+Google/UCSB IBM
+51
+NISQ –Noisy Intermediate -Scale Quantum Era
+•John Preshill of CalTech introduced this terminology in 2018
+•https://arxiv.org/abs/1801.00862
+•Quantum computers can do things that classical computers can’t
+•But they won't be big enough to provide fault -tolerant 
+implementations of the algorithms we know about.
+•Noisy because we don't have enough qubits to spare for error 
+correction, and so we'll need to directly use the imperfect qubits at 
+the physical layer.
+•And 'Intermediate -Scale' because of their small (but not too small) 
+qubit number (50 -100 qubits).
+52
+NISQ –Noisy Intermediate -Scale Quantum Era
+53
+Roadmap of Quantum Computers
+54
+Quantum Volume
+•Quantum volume VQis a metric that measures the capabilities and error 
+rates of a quantum computer.
+•Defined by Nikolaj Moll et al. Quantum Sci. Technol. 3, 030503 (2018 ).
+•It depends on the number of qubits Nas well as the number of steps 
+that can be executed, the circuit depth d:
+•IBMs modified the quantum volume definition:
+DateQuantum volume
+(circuit size)Manufacturer Notes 
+2020, January 32 (5 ×5) IBM "Raleigh" (28 qubits)
+2020, June 64 (6 ×6) Honeywell 6 qubits 
+2020, August 64 (6 ×6) IBM 27 qubits
+2020, November 128 (7 ×7) Honeywell "H1" (10 qubits)55
+Applications of Quantum Computers
+56
+Application 1. Quantum Factoring
+A quantum computer can factor numbers 
+exponentially faster than classical computers
+15  = 3 5  (…easy)
+38647884621009387621432325631  = ? ?P. Shor (1994)
+Importance: cryptanalysis
+public key cryptography relies on 
+inability to factor large numbers
+Application 2: Quantum Search L. Grover (1997)
+A quantum computer can find a marked entry in 
+an unsorted database quadratically faster than 
+classical computers
+(e.g., given a phone number, finding the owner’s 
+name in a phonebook)Importance: “satisfiability” problems
+•fast searching of big data
+•inverting complex functions
+•determining the median or other 
+global properties of data
+•pattern recognition; machine visionBest classical 
+algorithm:
+1024stepsShor’s quantum 
+algorithm:
+1010steps
+On classical THz 
+computer:
+150,000 yearsOn quantum THz 
+computer:
+<1 second
+57
+Application 3: Quantum Simulation
+high -TC
+super -
+conductorQuantum modelling is hard: Nquantum systems require 
+solution to 2Ncoupled eqns
+Alternative approach: Implement model of interacting system on a quantum simulator , or “standard” set of 
+qubits with programmable interactions𝑖ℏ𝜕Ψ
+𝜕𝑡=𝐻Ψ
+Atomic ions                            Trapped atoms                      Superconductors                           NV -diamond
+Quantum Material Design Understand exotic material properties 
+or design new quantum materials from the bottom up
+Energy and Light Harvesting Use quantum simulator to program QCD lattice 
+gauge theories, test ideas connecting cosmology to information theory ( AdS-
+CFT etc..)
+Quantum Field Theories Program QCD lattice gauge theories, test ideas connecting cosmology to 
+information theory ( AdS-CFT etc..)
+58
+Minimizing complex (nonlinear) functions by 
+“simultaneously sampling” entire space 
+through quantum superposition 
+Example: quadratic optimization
+Minimize
+this function maps to energy of 
+quantum magnetic network Killer Application?
+•could crack a large class of intractable 
+problems: factoring, “traveling salesman” 
+problem, etc..
+•BUT not known if there is always a 
+quantum speedupApplication 4: Quantum Optimization
+𝑓(𝑥1,𝑥2,…)=෍
+𝑖<𝑗𝑞𝑖𝑗𝑥𝑖𝑥𝑗+෍
+𝑖𝑐𝑖𝑥𝑖Relevant to
+•Logistics
+•Operations Research
+•VLSI design
+•Finance
+global minimum
+of  f (x1,x2 )x1x2
+59
+Uses of a quantum network
+•Secret key generation: cryptography
+•Certifiable random number generation
+•Quantum repeaters (“amplifiers”)
+•Distributed quantum entanglement for optimal decision making
+•Large -scale quantum computingLocation A Location BDistance L
+(0.1m –10,000 km)
+Location C
+Location DQuantum
+NetworkApplication 5: Quantum Networks
+60
+Case Study 1: Quantum Cryptography
+•Alice and Bob wish to establish a secret key, but the communication lines between 
+them may be compromised.  Alice sends random q -bits to Bob.  For each one, she 
+picks either basis {|0>,|1>} or {|0>|1>} .
+•Bob randomly chooses a basis to measure the bit in.  If he guesses wrong, he gets 
+a random bit.
+•If an eavesdropper Evetries to intercept the q -bits, she doesn’t know (any more 
+than Bob) the basis in which they were prepared.  If she guesses wrong, the bit 
+she passes on to Bob will have been disturbed.
+•After Nbits have been sent, Alice and Bob compare notes as to which bases they 
+used.  All bits where their bases didn’t match are discarded.  The remainder 
+should be perfectly correlated.
+61
+Case Study 1: Quantum Cryptography
+62

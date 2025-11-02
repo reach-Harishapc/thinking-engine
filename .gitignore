@@ -38,11 +38,6 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Models and data (large files)
-models/*.think
-models/*.think.gz
-!models/.gitkeep
-
 # Logs
 *.log
 logs/

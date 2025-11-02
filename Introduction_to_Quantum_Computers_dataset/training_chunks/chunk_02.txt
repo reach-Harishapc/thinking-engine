@@ -1,0 +1,180 @@
+Agenda
+•What is a Quantum Computer?
+•Brief history, quantum mechanics, current status
+•Basic Concepts of Quantum Computers
+•Qubit, superposition, entanglement, decoherence,
+measurement
+•Quantum gates, quantum circuits, quantum algorithm
+•How does a Quantum Computer work?
+•Requirements of quantum computer
+•Quantum computer design & roadmap
+•Applications of Quantum Computers
+•Quantum optimization
+•Quantum chemistry and materials
+•Quantum communication
+•Case studies: cryptography, Shor algorithm, variational 
+quantum eigensolver
+•DEMO: Quantum Computing with QISKit
+4
+About Myself
+•Ph.D. degree, quantum chemist by training, UNC -CH Chemistry
+•Senior Computational Scientist @ Research Computing Center, UNC -CH
+•Engagement group, training, collaboration, etc.
+•Research Interests: Development of density functional theory and its 
+applications in biology, energy and drug design (using HPC/HTC clusters)
+5
+https://shubin.web.unc.edu/
+“There's Plenty of Room at the Bottom ” (1959) 
+“When we get to the very, very small world –say circuits of seven 
+atoms –we have a lot of new things that would happen that 
+represent completely new opportunities for design .
+Atoms on a small scale behave like nothing on a large scale, 
+for they satisfy the laws of quantum mechanics…”
+Richard FeynmanMoore’s law  & Future of Computers
+2040 2025 atom -sized 
+transistors molecular -sized 
+transistors
+Moore, G. E. Electronics 8, 114 –
+117 (1965). 
+Image from: Ferain , I. et al., 
+Nature 479, 310 –316 (2011).
+SiliconSource DrainGate Insulator
+i386
+1986
+Moore’s law will soon 
+run into major 
+physical constraints!Moore's law is the observation 
+that the number of transistors in a 
+dense integrated circuit doubles 
+about every two years.
+6
+What is a quantum computer?
+➢Quantum Computer
+➢A computer that uses laws of quantum mechanics to perform massively 
+parallel computing through superposition, entanglement, and de coherence .
+➢Classical Computer
+➢A computer that uses voltages flowing through circuits and gates, which 
+can be controlled and manipulated entirely by classical mechanics.
+7
+Evolution of Quantum Theory & Quantum Technology
+8
+The Foundations From Theory to Practice Commercialization & Application
+1980 2010
+1900’s 2021
+1925 : Schrödinger 
+Equation proposed 2020 : Chinese scientists
+claimed 100 trillion faster 
+of quantum supremacy
+Brief History of Quantum Computers
+•1981:Richard Feynman proposed to use quantum computing to model quantum systems. He 
+also describe theoretical model of quantum computer
+•1985: David Deutsch described first universal quantum computer
+•1994: Peter Shor developed the first algorithm for quantum computer (factorization into 
+primes)
+•1995 Schumacher proposed “Quantum bit” or “qubit” as physical resource
+•1996 :LovGrover developed an algorithm for search in unsorted database
+•1998: the first quantum computers on two qubits, based on NMR (Oxford; IBM, MIT, Stanford )
+•2000: quantum computer on 7 qubits, based on NMR (Los -Alamos)
+•2001: 15 = 3 x5 on7-qubit quantum computer by IBM
+•2005 -2006: experiments with photons; quantum dots; fullerenes and nanotubes as "particle 
+traps"
+9
+Brief History of Quantum Computers
+•2007: D-Wave announced the creation of a quantum computer on 16 qubits
+•2012: D-Wave claimed a quantum computation using 84 qubits
+•2017: D-Wave Systems Inc. announced the D -Wave 2000Q quantum annealer with 2000 qubits
+•2017: Microsoft revealed Q Sharp with 32 qubits
+•2018: Google announced the creation of a 72 -qubit quantum chip
+•2019: Google claimed quantum supremacy with 54 qubits to perform operations in 200 
+seconds that would take a supercomputer about 10,000 years to complete
+•2019: IBM revealed 53 qubits
+•2020: Chinese researchers claimed to have achieved quantum supremacy using a photonic 76 -
+qubit system at 100 trillion times the speed of classical supercomputers
+•2020: IBM will build 1121 -qubit quantum computer in 2023, and 1 million -qubit quantum 
+computer in 2030.
+10
+Quantum Mechanics
+Quantum mechanics is the theory that describes the behavior of microscopic 
+systems, such as photons, electrons, atoms, molecules, etc.
+Nobody understands quantum mechanics!
+“No, you’re not going to be able to understand it.... You see, my physics 
+students don’t understand it either. That is because I don’t understand it. 
+Nobody does. ... The theory of quantum electrodynamics describes Nature 
+as absurd from the point of view of common sense. And it agrees  fully with 
+an experiment. So I hope that you can accept Nature as She is –absurd”
+--Richard Feynman
+11
+Classical vs. Quantum Mechanics
+Classical Mechanics
+•It deals with macroscopic particles
+•It is based on Newton’s laws of 
+motion and Maxwell’s 
+electromagnetic wave theory
+•Any amount of energy may be 
+emitted or absorbed continuously
+•The state of a system is defined 
+exactly by specifying their positions 
+and velocities 
+•The future state can be predicted 
+with certaintyQuantum Mechanics
+•It deals with microscopic particles
+•It is based on the Schrödinger equation
+•In Planck’s postulation , only discrete 
+values of energy are emitted or absorbed 
+–origin of “ quantum ”
+•Because of Heisenberg’s uncertainty 
+principle and de Broglie hypothesis dual 
+nature of matter (both particle & wave), 
+the state of a system cannot be specified 
+exactly
+•It gives probabilities of finding particles at 
+various locations in space 
+12
+Quantum Mechanics
+•Quantum states , represented by 
+Dirac’s ket, |>, evolve in time 
+according to the Schrödinger equation:
+•which implies that time evolution is 
+described by unitary transformations :
+•where | > is the quantum state 
+(wavefunction) and H is Hamiltonian
+•This theory, which has been 
+extensively tested by experiments, is 
+probabilistic in nature.  The outcomes 
+of measurements on quantum 
+systems are not deterministic .
+•Between measurements, quantum 
+systems evolve according to linear
+equations (the Schrödinger equation).  
+This means that solutions to the 
+equations obey a superposition 
+principle :  linear combinations of 
+solutions are still solutions .
+13
+Unitary Transformation as Quantum Computing
+|Ψ(0)>PREPARATION :
+The initial preparation of the state defines a 
+wave function at time t0=0.
+|Ψ(1)>
+….
+|Ψ(n)>
+P(Ф)=|<Ф|Ψ(n)>|2U(t1,t0)
+U(t2,t1)
+U(tn,tn-1)0
+1
+nSTATE EVOLUTION :
+Evolved by a sequence of unitary operations
+MEASUREMENT :
+Quantum measurement is projective.
+Collapsed by measurement of the state….
+14 Classical Computing Approach using Flow Chart
+15
+Unitary Transformation as Quantum Computing
+Onaquantum computer, programs areexecuted byunitary evolution ofaninput
+thatisgiven bythestate ofthesystem, |n>,which canineither 0or1state.
+Since allunitary operators areinvertible, wecanalways reverse or‘uncompute ’a
+computation onaquantum computer .
+Quantum Computing Approach using Quantum Circuit
+What does a quantum computer look like?
+IBM 53 -qubit superconductor -based quantum computerChinese 76 -qubit photon -based quantum computer
+IonQ , ion -trap-based 32 -qubit quantum computer 16

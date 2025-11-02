@@ -402,14 +402,132 @@ Guidelines:
             response = random.choice(self.responses[conv_intent])
             return response
 
-        # Check memory for similar queries if memory is available
+        # Check memory for similar queries and training data if memory is available
         if self.memory:
             try:
-                similar = self.memory.recall(prompt, limit=3)
-                if similar:
-                    # Return a response based on learned patterns
-                    return f"Based on my learning, I can tell you: {similar[0].get('output', 'I need more information about that.')}"
-            except:
+                # First check for direct similar queries
+                similar_queries = self.memory.recall(prompt, limit=2)
+                if similar_queries:
+                    for item in similar_queries:
+                        if item.get('output'):
+                            return f"Based on my previous learning: {item['output']}"
+
+                # Then check for relevant training samples (PDF content)
+                # Get all recent experiences and filter for training samples
+                # Since recall("") doesn't work, let's read the memory file directly
+                training_samples = []
+                try:
+                    memory_file = os.path.join(os.path.dirname(__file__), '..', 'memory_store', 'experiences.jsonl')
+                    if os.path.exists(memory_file):
+                        with open(memory_file, 'r', encoding='utf-8') as f:
+                            for line in f:
+                                try:
+                                    exp = json.loads(line.strip())
+                                    meta = exp.get('meta', {})
+                                    if 'full_content' in meta:  # This is a training sample
+                                        training_samples.append(exp)
+                                except json.JSONDecodeError:
+                                    continue
+                except Exception as e:
+                    print(f"[DEBUG] Error reading memory file: {e}")
+
+                if training_samples:
+                    # Search through training samples for relevant content
+                    prompt_lower = prompt.lower()
+                    relevant_samples = []
+
+                    for sample in training_samples:
+                        meta = sample.get('meta', {})
+                        content = meta.get('full_content', '').lower()
+
+                        # Check if key terms from the query appear in the training content
+                        query_words = set(prompt_lower.split())
+                        content_words = set(content.split())
+
+                        # Calculate overlap - if more than 15% of query words appear in content
+                        overlap = len(query_words & content_words)
+                        overlap_ratio = overlap / len(query_words) if query_words else 0
+
+                        # Bonus for exact keyword matches (especially for technical terms)
+                        bonus_score = 0
+                        important_keywords = ['qubit', 'quantum', 'computer', 'algorithm', 'gate', 'circuit']
+                        for keyword in important_keywords:
+                            if keyword in prompt_lower and keyword in content:
+                                bonus_score += 0.2  # Significant bonus for exact matches
+
+                        total_score = overlap_ratio + bonus_score
+
+                        if total_score > 0.15:  # Reasonable threshold for relevance
+                            relevant_samples.append((total_score, sample))
+
+                    # Sort by relevance and return the most relevant training content
+                    if relevant_samples:
+                        relevant_samples.sort(key=lambda x: x[0], reverse=True)
+                        best_match = relevant_samples[0][1]
+                        meta = best_match.get('meta', {})
+                        content = meta.get('full_content', '')
+
+                        # Extract a more complete and meaningful snippet
+                        # Look for the most relevant section based on query keywords
+                        query_lower = prompt.lower()
+                        content_lower = content.lower()
+
+                        # Find the best starting point - look for sections containing query keywords
+                        best_start = 0
+                        query_words = set(query_lower.split())
+                        max_score = 0
+
+                        # Scan through the content in windows to find the most relevant section
+                        window_size = 600
+                        for i in range(0, len(content) - window_size, 50):  # Smaller step size
+                            window = content[i:i + window_size].lower()
+                            window_words = set(window.split())
+
+                            # Calculate base overlap
+                            overlap = len(query_words & window_words)
+
+                            # Add bonus for important keywords
+                            bonus = 0
+                            important_keywords = ['qubit', 'quantum', 'computer', 'algorithm', 'gate', 'circuit', 'entanglement', 'superposition']
+                            for keyword in important_keywords:
+                                if keyword in query_lower and keyword in window:
+                                    bonus += 2  # Higher bonus for exact keyword matches in window
+
+                            total_score = overlap + bonus
+
+                            if total_score > max_score:
+                                max_score = total_score
+                                best_start = i
+
+                        # Extract from the best starting point
+                        snippet = content[best_start:best_start + 1000]  # Larger snippet
+
+                        # Try to make it more complete by finding natural breaks
+                        if len(snippet) >= 800:
+                            # Look for paragraph breaks first
+                            last_para = snippet.rfind('\n\n')
+                            if last_para > 600:
+                                snippet = snippet[:last_para]
+                            else:
+                                # Look for sentence endings
+                                last_period = snippet.rfind('.')
+                                if last_period > 700:
+                                    snippet = snippet[:last_period + 1]
+                                else:
+                                    # Look for line breaks
+                                    last_line = snippet.rfind('\n')
+                                    if last_line > 600:
+                                        snippet = snippet[:last_line]
+
+                        # Clean up the snippet
+                        snippet = snippet.strip()
+                        if not snippet.endswith(('.', '!', '?')):
+                            snippet += '...'
+
+                        return f"Based on my training data about quantum computing, here's what I know:\n\n{snippet}"
+
+            except Exception as e:
+                print(f"[DEBUG] Memory search error: {e}")
                 pass
 
         # WEB SEARCH FALLBACK: If we don't have good knowledge, search the web

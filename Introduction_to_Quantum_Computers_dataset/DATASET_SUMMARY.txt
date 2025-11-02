@@ -1,0 +1,15 @@
+PDF Dataset Summary
+===================
+Source PDF: Introduction_to_Quantum_Computers.pdf
+Total Characters: 36,502
+Training Chunks: 6
+Chunk Size: 800 characters
+Output Directory: Introduction_to_Quantum_Computers_dataset
+
+Files Created:
+- full_extracted_text.txt: Complete extracted text
+- training_dataset.json: JSON format for training
+- training_chunks/: Individual chunk files (chunk_01.txt, chunk_02.txt, ...)
+
+Ready for training with:
+python run_model.py --train Introduction_to_Quantum_Computers_dataset --save
