@@ -481,4 +481,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-*Thinking Engine represents a paradigm shift in AI development - moving from opaque, uncontrollable systems to transparent, user-empowerable AI. Your groundbreaking research deserves to be shared with the world!* 🌟
+*Thinking Engine represents a paradigm shift in AI development - moving from opaque, uncontrollable systems to transparent, user-empowerable AI. Our groundbreaking research deserves to be shared with the world!* 🌟
