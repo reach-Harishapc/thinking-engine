@@ -194,12 +194,12 @@ def main():
         engine.load_model()
 
     if args.chat:
-        print("🧠 Thinking Engine Interactive Chat")
+        print("Thinking Engine Interactive Chat")
         print("Type 'exit' to quit.\n")
         while True:
             query = input("You: ")
             if query.lower() in ["exit", "quit"]:
-                print("👋 Exiting chat.")
+                print("Exiting chat.")
                 break
             response = engine.think(query)
             print(f"Model: {response}\n")
