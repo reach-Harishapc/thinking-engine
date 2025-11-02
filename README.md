@@ -335,7 +335,6 @@ thinking-engine/
 ## 🔬 Research Methodology
 
 ### Experimental Setup
-- Comparative analysis with GPT-3.5 and GPT-4
 - Performance benchmarking across cognitive domains
 - Compression and security testing
 - User experience evaluation
