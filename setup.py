@@ -71,7 +71,6 @@ setup(
         "console_scripts": [
             "thinking-engine=thinking_engine.cli:main",
             "thinking-engine-server=thinking_engine.server:main",
-            "thinking-engine-test=run_multiplatform_tests:main",
         ],
     },
     include_package_data=True,
