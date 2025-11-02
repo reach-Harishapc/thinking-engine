@@ -1,0 +1,15 @@
+include README.md
+include LICENSE
+include requirements.txt
+include thinking_engine_benchmark_report.md
+include docs/index.html
+include docs/*.png
+include arxiv_submission/arxiv_paper.pdf
+include arxiv_submission/*.png
+include wiki/*.md
+recursive-include thinking_engine *.py
+recursive-include tests *.py
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude .pytest_cache
+global-exclude .DS_Store

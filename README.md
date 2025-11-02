@@ -409,6 +409,13 @@ Thinking Engine provides unique capabilities not found in traditional ML framewo
 ## 🚀 Quick Start
 
 ### Installation
+
+#### From PyPI (Recommended)
+```bash
+pip install thinking-engine
+```
+
+#### From Source
 ```bash
 git clone https://github.com/reach-Harishapc/thinking-engine.git
 cd thinking-engine
