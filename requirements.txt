@@ -2,7 +2,6 @@ Flask
 requests
 numpy
 PyPDF2
-psutil
 # Optional: For enhanced deployment features
 # flask-limiter==3.5.0  # Rate limiting
 # gunicorn==21.2.0     # Production WSGI server
