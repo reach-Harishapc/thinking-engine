@@ -2,11 +2,25 @@
 """
 Thinking Engine — backend.py
 Author: Harish
-Purpose:
-    Multi-platform backend support for CPU, GPU (MPS/Metal), and Quantum computing.
-    Provides hardware-accelerated computation capabilities.
-"""
 
+Purpose:
+    This backend system is designed so that the core model logic does NOT depend
+    on PyTorch or any deep learning framework. The only reason PyTorch is
+    currently used is to access hardware-accelerated matrix operations on GPU
+    devices (MPS/Metal/CUDA).
+
+    In other words:
+       - NumPy = used for CPU computation
+       - PyTorch = used ONLY as a device driver for GPU compute (not for training models)
+
+    Future Goal:
+        Replace PyTorch GPU usage with JAX, OpenCL, or direct Metal/Vulkan compute kernels
+        so that the system is fully framework-independent.
+
+    Training:
+        Training still uses our own gradient update functions. PyTorch is NOT doing
+        autograd or neural network training. We manually perform weight updates.
+"""
 import os
 import time
 import numpy as np
