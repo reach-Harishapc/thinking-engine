@@ -9,7 +9,7 @@
 **Affiliation:** Data Scientist | GenAI & Quantum Computing Specialist | AI Research | AWS Cloud Expert | Industry 4.0→5.0 & IoT Innovator | Metaverse | AR/VR Visionary | Digital Twin | Digital Transformation | Quantum AI | Agentic AI  
 **Contact:** reach.harishapc@gmail.com
 **GitHub:** [reach-Harishapc](https://github.com/reach-Harishapc)  
-**arXiv Submission:** [arxiv_submission/](arxiv_submission/)
+**HAL Submiss:** [https://hal.science/hal-05361798)](HAL Submiss/)
 
 **Community Server** (https://discord.gg/EK9A4QGtG)
 
@@ -647,20 +647,18 @@ This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENS
 - **Email**: reach.harishapc@gmail.com
 - **LinkedIn**: [harisha-p-c-207584b2](https://www.linkedin.com/in/harisha-p-c-207584b2/)
 - **GitHub**: [reach-Harishapc](https://github.com/reach-Harishapc)
-- **arXiv**: [Coming Soon]()
+- **HAL**: https://hal.science/hal-05361798
 
 ---
 
 ## 🔗 Links
 
-- **arXiv Paper**: [arxiv_submission/](arxiv_submission/) (PDF + LaTeX source)
+- **HAL Paper**: [[HAL/](https://hal.science/hal-05361798)](https://hal.science/hal-05361798/)
 - **Interactive Demo**: `python run_model.py --chat`
 - **API Documentation**: See [deploy_api.py](deploy_api.py)
 - **Research Paper**: [arxiv_paper.tex](arxiv_paper.tex)
 
 ---
-
-**⭐ If you find this work interesting, please star the repository and cite our arXiv paper when published!**
 
 ---
 
