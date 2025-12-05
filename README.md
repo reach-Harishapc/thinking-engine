@@ -14,7 +14,7 @@
 **Community Server** (https://discord.gg/EK9A4QGtG)
 
 
-** Buy Me a Coffe ** (https://buymeacoffee.com/reachharist)
+Buy Me a Coffe (https://buymeacoffee.com/reachharist)
 ---
 
 ## 🎯 **Why Thinking Engine? Alternative to PyTorch & TensorFlow**
