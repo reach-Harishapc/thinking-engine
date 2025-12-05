@@ -650,7 +650,9 @@ This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENS
 - **LinkedIn**: [harisha-p-c-207584b2](https://www.linkedin.com/in/harisha-p-c-207584b2/)
 - **GitHub**: [reach-Harishapc](https://github.com/reach-Harishapc)
 - **HAL**: https://hal.science/hal-05361798
+- **Google Scholar**: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PwF3FxoAAAAJ&citation_for_view=PwF3FxoAAAAJ:u5HHmVD_uO8C
 
+Buy Me a Coffe (https://buymeacoffee.com/reachharist)
 ---
 
 ## 🔗 Links
